@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: phishing-protector-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/phishing-protector-db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  cache:
+    type: caffeine
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+app:
+  subscription:
+    management:
+      sms-number: "+48 000"
+
+webrisk:
+  #Insert correct api key here
+  api-key: empty
